@@ -1,5 +1,11 @@
+import Header from "./components/Header";
+
 const App = () => {
-  return <><h1 className="bg-amber-400">test</h1></>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export default App;
