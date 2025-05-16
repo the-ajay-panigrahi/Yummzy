@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const Header = () => {
   return (
     <header className="shadow-lg">
@@ -9,19 +11,19 @@ const Header = () => {
         />
         <ul className="flex justify-center items-center gap-7 text-xl font-medium">
           <li className="text-slate-700 hover:text-slate-900 hover:scale-110 hover:border-b-2 border-orange-500 cursor-pointer transition-all duration-150">
-            Home
+            <Link to={"/"}>Home</Link>
           </li>
           <li className="text-slate-700 hover:text-slate-900 hover:scale-110 hover:border-b-2 border-orange-500 cursor-pointer transition-all duration-150">
-            About Us
+            <Link to={"/about-us"}>About Us</Link>
           </li>
           <li className="text-slate-700 hover:text-slate-900 hover:scale-110 hover:border-b-2 border-orange-500 cursor-pointer transition-all duration-150">
-            Services
+            <Link to={"/services"}> Services</Link>
           </li>
           <li className="text-slate-700 hover:text-slate-900 hover:scale-110 hover:border-b-2 border-orange-500 cursor-pointer transition-all duration-150">
-            Contact Us
+            <Link to={"/contact-us"}>Contact Us</Link>
           </li>
           <li className="text-slate-700 hover:text-slate-900 hover:scale-110 hover:border-b-2 border-orange-500 cursor-pointer transition-all duration-150">
-            Team
+            <Link to={"/team"}>Team</Link>
           </li>
         </ul>
       </nav>
