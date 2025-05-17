@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { restaurantMenuUrl } from "../utils/constants";
+import ShimmerResMenu from "./ShimmerResMenu";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();
-  const [restaurantMenu, setRestaurantMenu] = useState();
+  const [restaurantMenu, setRestaurantMenu] = useState(null);
 
   useEffect(() => {
     fetchRestaurantMenu();
@@ -27,6 +28,10 @@ const RestaurantMenu = () => {
     avgRating,
     totalRatingsString,
   } = restaurantMenu?.cards[2]?.card?.card?.info ?? {};
+
+  if (!restaurantMenu) {
+    return <ShimmerResMenu />;
+  }
 
   return (
     <div className="flex flex-col justify-center items-center max-w-7xl mx-auto text-slate-700 gap-5 my-10">
