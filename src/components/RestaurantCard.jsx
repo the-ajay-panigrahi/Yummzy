@@ -12,7 +12,7 @@ const RestaurantCard = ({ data }) => {
   } = data.info;
 
   return (
-    <div class="shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_0px_-2px_6px_0px_inset_rgba(10,37,64,0.35)] rounded-3xl overflow-hidden w-72 h-[435px] cursor-pointer hover:scale-110 transition-all duration-200 ">
+    <div className="shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_0px_-2px_6px_0px_inset_rgba(10,37,64,0.35)] rounded-3xl overflow-hidden w-72 h-[435px] cursor-pointer hover:scale-110 transition-all duration-200 ">
       <img
         className="h-64 w-full object-cover object-top"
         src={restaurantCardImageUrl + cloudinaryImageId}
