@@ -3,11 +3,11 @@ const ShimmerHome = () => {
     return (
       <div
         role="status"
-        class="max-w-sm border border-gray-200 animate-pulse dark:border-gray-700 shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_0px_-2px_6px_0px_inset_rgba(10,37,64,0.35)] rounded-3xl overflow-hidden w-72 h-[435px] cursor-pointer hover:scale-110 transition-all duration-200  flex flex-col gap-2"
+        className="max-w-sm border border-gray-200 animate-pulse dark:border-gray-700 shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),_0px_30px_60px_-30px_rgba(0,0,0,0.3),_0px_-2px_6px_0px_inset_rgba(10,37,64,0.35)] rounded-3xl overflow-hidden w-72 h-[435px] cursor-pointer hover:scale-110 transition-all duration-200  flex flex-col gap-2"
       >
-        <div class="flex items-center justify-center bg-gray-300 dark:bg-gray-700">
+        <div className="flex items-center justify-center bg-gray-300 dark:bg-gray-700">
           <svg
-            class="max-h-65 text-gray-200 dark:text-gray-600"
+            className="max-h-65 text-gray-200 dark:text-gray-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -18,17 +18,17 @@ const ShimmerHome = () => {
           </svg>
         </div>
         <div className="p-2 flex flex-col gap-2 mt-3">
-          <div class="h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-3"></div>
+          <div className="h-4 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-3"></div>
           <div className="flex gap-2  mb-2.5">
-            <div class="h-2 w-full bg-gray-200 rounded-full dark:bg-gray-700"></div>
-            <div class="h-2 w-full bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div className="h-2 w-full bg-gray-200 rounded-full dark:bg-gray-700"></div>
+            <div className="h-2 w-full bg-gray-200 rounded-full dark:bg-gray-700"></div>
           </div>
-          <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
-          <div class="flex items-center mt-4 gap-2">
-            <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full "></div>
-            <div class="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+          <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+          <div className="flex items-center mt-4 gap-2">
+            <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full "></div>
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
           </div>
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       </div>
     );

@@ -1,8 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
 import { restaurantCardImageUrl } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 const Accordion = ({ data, showItems, setShowIndex }) => {
   const handleAccordion = () => {
     setShowIndex();
+  };
+
+  const dispatch = useDispatch();
+  const handleAddToCart = (itemList) => {
+    dispatch(addItem(itemList));
   };
 
   return (
@@ -18,12 +25,15 @@ const Accordion = ({ data, showItems, setShowIndex }) => {
       </div>
       {showItems && (
         <div>
-          {data?.card?.card?.itemCards.map((itemList) => {
+          {data?.card?.card?.itemCards.map((itemList, index) => {
             const { name, description, imageId, defaultPrice, ratings, price } =
               itemList?.card?.info ?? {};
 
             return (
-              <div className="flex justify-between items-center mb-3 border-b-2 border-slate-200 px-10 py-3 gap-7">
+              <div
+                className="flex justify-between items-center mb-3 border-b-2 border-slate-200 px-10 py-3 gap-7"
+                key={index}
+              >
                 <div>
                   <p className="text-lg font-medium">{name}</p>
                   <p className="mt-4 mb-2 text-slate-800">{description}</p>
@@ -47,7 +57,12 @@ const Accordion = ({ data, showItems, setShowIndex }) => {
                     src={restaurantCardImageUrl + imageId}
                     alt=""
                   />
-                  <button className="bg-white border-2 border-slate-200 w-[90%] left-[5%] rounded-lg shadow-2xl font-medium text-lg absolute py-2 bottom-[-10px] hover:bg-slate-300 transition-all duration-150">
+                  <button
+                    className="bg-white border-2 border-slate-200 w-[90%] left-[5%] rounded-lg shadow-2xl font-medium text-lg absolute py-2 bottom-[-10px] hover:bg-slate-300 transition-all duration-150"
+                    onClick={() => {
+                      handleAddToCart(itemList);
+                    }}
+                  >
                     Add
                   </button>
                 </div>

@@ -10,13 +10,18 @@ import Contact from "./components/Contact";
 import Team from "./components/Team";
 import RestaurantMenu from "./components/Restaurants";
 import RestaurantInfo from "./components/RestaurantMenu";
+import { Provider } from "react-redux";
+import appStore  from "./utils/appStore";
+import Cart from "./components/Cart";
 
 const AppLayout = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <Provider store={appStore}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Provider>
     </>
   );
 };
@@ -32,6 +37,7 @@ const router = createBrowserRouter([
       { path: "/contact-us", element: <Contact /> },
       { path: "/team", element: <Team /> },
       { path: "/restaurant/:resId", element: <RestaurantInfo /> },
+      { path: "/cart", element: <Cart /> },
     ],
     errorElement: <Error />,
   },
